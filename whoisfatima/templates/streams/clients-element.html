@@ -1,0 +1,30 @@
+{% load static %} {% load wagtailimages_tags %}
+
+
+<!-- clients-section -->
+<section class="clients-section">
+    <div class="auto-container">
+
+
+        <div class="clients-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+            {% for image in self.images %}
+            {% image image.image fill-1000x500 as img %}
+            {% if image.button_page %}
+            <figure class="client-logo">
+                <a href="{{ image.button_page }}"><img src="{{ img.url }} " alt=" {{ img.alt }}"></a>
+            </figure>
+            {% elif image.button_url %}
+            <figure class="client-logo">
+                <a href="{{ image.button_url }}"><img src="{{ img.url }} " alt=" {{ img.alt }}"></a>
+            </figure>
+            {% elif none %}
+            <figure class="client-logo">
+                <a href="#"><img src="{{ img.url }} " alt=" {{ img.alt }}"></a>
+            </figure>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+<!-- clients-section end -->

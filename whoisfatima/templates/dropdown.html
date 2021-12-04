@@ -1,0 +1,48 @@
+{% load static %}
+
+<form action="" class="form-position">
+  <div class="input-icons">
+    <i class="fa fa-search icon"></i>
+    <input
+      class="input-field"
+      id="RSearch"
+      type="text"
+      placeholder="Type to Search"
+    />
+  </div>
+  <p style="color: white; font-size: 22px; margin-top: 10px">or</p>
+  <div class="form-group">
+    <select name="Location" id="R-Location">
+      <option value="volvo">
+        <span class="iconstyle">
+          <img src="{% static 'main/images/icons/icon-15.png' %}" alt="GFG" />
+        </span>
+        Select Location
+      </option>
+      <option value="saab">Melborne</option>
+      <option value="mercedes">Sydney</option>
+      <option value="audi">Brisbane</option>
+      <option value="audi">Perth</option>
+      <option value="audi">Adelaide</option>
+      <option value="audi">Canberra</option>
+    </select>
+    <select name="Restaurant-type" id="R-Type">
+      <option value="volvo"><span>Search for Restaurant Type</span></option>
+      <option value="saab">Fine Dinning</option>
+      <option value="mercedes">Casual Dinning</option>
+      <option value="audi">Contemorary Casual</option>
+      <option value="audi">Family Style</option>
+      <option value="audi">Fast Casual</option>
+      <option value="audi">Fast Food</option>
+      <option value="audi">Cafe</option>
+      <option value="audi">Buffet</option>
+    </select>
+    <select name="Favourite-Dish" id="R-FavDish">
+      <option value="volvo">Search for your Favourite Dish</option>
+      <option value="saab">Melborne</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <button type="submit" class="theme-btn style-two">Search</button>
+  </div>
+</form>

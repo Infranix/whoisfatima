@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% load static %} {% load wagtailcore_tags %} {% block content %} {% block banner %}
+
+
+
+{% endblock %}
+
+{% for block in page.content %}
+{% include_block block %}
+{% endfor %}
+{% endblock content %}
